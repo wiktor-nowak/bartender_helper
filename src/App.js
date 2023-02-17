@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import SearchBar from "./SearchBar";
+import Display from "./Display";
+import Axios from "axios-observable";
 
-function App() {
+export default function App() {
+  const [results, setResults] = useState([]);
+
+  function updateSearch(query) {
+    Axios.get(
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`
+    ).subscribe((resp) => {
+      setResults(resp.data);
+    });
+  }
+
+  function showValue() {
+    console.log(results);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchBar updateIngredient={updateSearch} />
+      <Display displayItem={results} />
+      <button onClick={showValue}>A BUTTON</button>
     </div>
   );
 }
-
-export default App;

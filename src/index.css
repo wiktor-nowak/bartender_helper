@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,4 +9,86 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.interestingFont {
+  font-family: 'Covered By Your Grace', cursive;
+  color: darkslategray;
+}
+
+.invitation {
+  width: 40%;
+}
+
+.search {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  display: block;
+  width: 65%;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: small;
+}
+
+#inputField {
+  margin: 5px 0;
+  padding: 5px;
+  width: 90%;
+}
+
+.styled-border {
+  border: 2px solid rgb(218, 230, 154);
+  border-radius: 5px;
+}
+
+.button {
+  width: 30%;
+  padding: 5px;
+  background-color: white;
+}
+
+.wrapper {
+  width: 85%;
+  padding: 20px;
+  background-color: rgb(218, 230, 154);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.pad {
+  background-color: white;
+  width: 40%;
+  margin: 2%;
+  border-radius: 5px;
 }
